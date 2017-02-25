@@ -4,8 +4,8 @@
 
 # Site
 title: 码
-subtitle:
-description:
+subtitle: 
+description: 80后的尾巴 | 吃 旅游 航拍 写码
 author: lldaaron
 language: zh-Hans
 timezone:
@@ -68,4 +68,6 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/lldaaron/lldaaron.github.io.git
+
