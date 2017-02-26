@@ -90,7 +90,7 @@
 <meta name="description" content="80后的尾巴 | 吃 旅游 跑步 骑行 航拍 写码">
 <meta property="og:type" content="website">
 <meta property="og:title" content="码">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/categories/spring/index.html">
 <meta property="og:site_name" content="码">
 <meta property="og:description" content="80后的尾巴 | 吃 旅游 跑步 骑行 航拍 写码">
 <meta name="twitter:card" content="summary">
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/categories/spring/"/>
 
 
 
 
 
-  <title> 码 </title>
+  <title> 分类: spring | 码 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +154,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,342 +257,40 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/26/spring的扩展点简介/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lldaaron">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://ww4.sinaimg.cn/large/006tKfTcly1fd2utu6u8aj30sg0sgta8.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="码">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/26/spring的扩展点简介/" itemprop="url">
-                  spring的扩展点简介
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T23:13:59+08:00">
-                2017-02-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/spring/" itemprop="url" rel="index">
-                    <span itemprop="name">spring</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/02/26/spring的扩展点简介/" class="leancloud_visitors" data-flag-title="spring的扩展点简介">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="针对某一个bean扩展"><a href="#针对某一个bean扩展" class="headerlink" title="针对某一个bean扩展"></a>针对某一个bean扩展</h4><h5 id="Aware"><a href="#Aware" class="headerlink" title="Aware"></a>Aware</h5><p>Aware的一些子类：<br><img src="https://ww4.sinaimg.cn/large/006tKfTcly1fbzvzjnjz8j30rq0lqq58.jpg" alt=""><br>常用的几个Aware：<br><img src="https://ww3.sinaimg.cn/large/006tKfTcly1fbzw599f8uj31es09eaak.jpg" alt=""></p>
-<blockquote>
-<p>通常，这些aware会在依赖装配后，初始化前进行回调（Invoked after population of normal bean properties but before an init callback）。</p>
-</blockquote>
-<h5 id="InitializingBean-amp-DisposableBean"><a href="#InitializingBean-amp-DisposableBean" class="headerlink" title="InitializingBean &amp; DisposableBean"></a>InitializingBean &amp; DisposableBean</h5><p><img src="https://ww1.sinaimg.cn/large/006tKfTcly1fbzvxs6v0vj30fy0co3yk.jpg" alt=""></p>
-<blockquote>
-<ol>
-<li>InitializingBean接口、@PostConstruct注解和init-method的xml配置，都能表示bean的初始化逻辑。</li>
-<li>同样，Disposable接口、@PreDestroy注解和destory-method的xml配置，都能表示bean的销毁的逻辑。</li>
-<li>从执行顺序上看，遵循 注解 -&gt; 接口 -&gt; xml配置 的回调顺序。</li>
-</ol>
-</blockquote>
-<h5 id="FactoryBean"><a href="#FactoryBean" class="headerlink" title="FactoryBean"></a>FactoryBean</h5><blockquote>
-<p>用于自定义bean的初始化，对bean的创建、初始化有完全的控制权。</p>
-</blockquote>
-<hr>
-<h4 id="针对所有bean扩展"><a href="#针对所有bean扩展" class="headerlink" title="针对所有bean扩展"></a>针对所有bean扩展</h4><h5 id="BeanPostProcessor"><a href="#BeanPostProcessor" class="headerlink" title="BeanPostProcessor"></a>BeanPostProcessor</h5><blockquote>
-<p>BeanPostProcessor在bean被装配后，init前、以及init后两个地方提供了扩展回调。</p>
-</blockquote>
-<p>BeanPostProcessor的方法回调时机：<br><img src="https://ww4.sinaimg.cn/large/006tKfTcly1fbzwaqtlj9j30nf096t9a.jpg" alt=""></p>
-<p>BeanPostProcessor以及它的子接口：<br><img src="https://ww2.sinaimg.cn/large/006tKfTcly1fbzmm1n5ynj31kw0gk76e.jpg" alt=""></p>
-<h6 id="InstantiationAwareBeanPostProcessor"><a href="#InstantiationAwareBeanPostProcessor" class="headerlink" title="InstantiationAwareBeanPostProcessor"></a>InstantiationAwareBeanPostProcessor</h6><blockquote>
-<p>InstantiationAwareBeanPostProcessor在bean被实例化前、实例化后、属性装配前提供了扩展回调。</p>
-</blockquote>
-<h6 id="DestructionAwareBeanPostProcessor"><a href="#DestructionAwareBeanPostProcessor" class="headerlink" title="DestructionAwareBeanPostProcessor"></a>DestructionAwareBeanPostProcessor</h6><blockquote>
-<p>DestructionAwareBeanPostProcessor在非原型bean被销毁前提供了扩展回调。</p>
-</blockquote>
-<hr>
-<h4 id="针对BeanFactory扩展"><a href="#针对BeanFactory扩展" class="headerlink" title="针对BeanFactory扩展"></a>针对BeanFactory扩展</h4><h5 id="BeanFactoryPostProcessor"><a href="#BeanFactoryPostProcessor" class="headerlink" title="BeanFactoryPostProcessor"></a>BeanFactoryPostProcessor</h5><p><img src="https://ww2.sinaimg.cn/large/006tKfTcly1fbzn9dhqi5j30ty0eoq3f.jpg" alt=""></p>
-<blockquote>
-<p>BeanFactoryPostProcessor在所有的bean创建前，对ConfigurableListableBeanFactory进行扩展，通常会对bean定义做一些修改。<br>最经典的子类是PropertyPlaceholderConfigurer，替换xml文件中的占位符，替换为properties文件中相应的key对应的value。<br>在容器启动时BeanFactoryPostProcessor的回调只会应用一次，而BeanPostProcessor会对每一个bean都应用，这里不要搞混了。</p>
-</blockquote>
-<h6 id="BeanDefinitionRegistryPostProcessor"><a href="#BeanDefinitionRegistryPostProcessor" class="headerlink" title="BeanDefinitionRegistryPostProcessor"></a>BeanDefinitionRegistryPostProcessor</h6><blockquote>
-<p>在BeanFactoryPostProcessor回调前，提供了对BeanDefinitionRegistry的扩展回调，通常用于注册新的bean定义</p>
-</blockquote>
-
-          
-        
-      
+  <section id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        spring
+        <small>分类</small>
+      </h2>
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
 
     
       
 
-  
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/26/开始记录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lldaaron">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://ww4.sinaimg.cn/large/006tKfTcly1fd2utu6u8aj30sg0sgta8.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="码">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h1 class="post-title">
         
+            <a class="post-title-link" href="/2017/02/26/spring的扩展点简介/" itemprop="url">
+              
+                <span itemprop="name">spring的扩展点简介</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/26/开始记录/" itemprop="url">
-                  开始记录
-                </a>
-              
-            
-          </h1>
-        
+      </h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T15:43:53+08:00">
-                2017-02-26
-              </time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-02-26T23:13:59+08:00"
+              content="2017-02-26" >
+          02-26
+        </time>
+      </div>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂七杂八/" itemprop="url" rel="index">
-                    <span itemprop="name">杂七杂八</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/02/26/开始记录/" class="leancloud_visitors" data-flag-title="开始记录">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>其实一直都有记录的习惯，只不过都是在evernote上记一些给自己看的笔记。</p>
-<p>工作快6年了，越发觉得自己懂了还不够，怎么样给别人说明白、写明白同样重要。</p>
-<p>从现在起开始在这里记录一些东西，一些之前的笔记重新整理、一些新的知识。主题不限于计算机，也会有个人感悟、旅行杂记等。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
 
 
@@ -602,6 +298,7 @@
   </section>
 
   
+
 
           
           </div>
